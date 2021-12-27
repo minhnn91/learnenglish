@@ -13,8 +13,15 @@ class CreateTableVocabulary extends Migration
      */
     public function up()
     {
-        Schema::create('table_vocabulary', function (Blueprint $table) {
+        Schema::create('vocabulary', function (Blueprint $table) {
             $table->id();
+            $table->string('vocabulary')->nullable();
+            $table->string('explain')->nullable();
+            $table->string('pronounce')->nullable();
+            $table->string('images')->nullable();
+            $table->string('example')->nullable();
+            $table->integer('view')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ class CreateTableVocabulary extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_vocabulary');
+        Schema::dropIfExists('vocabulary');
     }
 }
