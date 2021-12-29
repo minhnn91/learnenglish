@@ -70,7 +70,7 @@ Route::middleware('auth')->group(function () {
         Route::get('vocabulary/create', [VocabularyController::class, 'create'])->name('knowledge.create');
         Route::post('vocabulary/create', [VocabularyController::class, 'save'])->name('knowledge.save');
         
-        Route::get('vocabulary/edit', [VocabularyController::class, 'edit'])->name('knowledge.edit');
+        Route::get('vocabulary/edit/{id}', [VocabularyController::class, 'edit'])->name('knowledge.edit');
         Route::post('vocabulary/edit', [VocabularyController::class, 'execEdit'])->name('knowledge.exec-edit');
         
         Route::post('vocabulary/delete/{id}', [VocabularyController::class, 'index'])->name('knowledge.index');

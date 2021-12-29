@@ -13,7 +13,7 @@ class CreateTableSentence extends Migration
      */
     public function up()
     {
-        Schema::create('table_sentence', function (Blueprint $table) {
+        Schema::create('sentence', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateTableSentence extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_sentence');
+        Schema::dropIfExists('sentence');
     }
 }
